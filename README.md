@@ -20,16 +20,17 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- In Windows, enable IIS with CGI.
-- Download/install PHP Manager for IIS as well as IIS Rewrite Module (https://www.iis.net/downloads/microsoft/url-rewrite)
-- Create a directory labeled "PHP". Then download the PHP runtime (https://www.php.net/releases/7_3_8.php). Extract files to "PHP".
-- If needed, download and run VC_Redistx86 package (https://shorturl.at/7R5Er)
-- Install and run MySQL. Apply relevant settings and create credentials.
+- IIS with CGI
+- PHP Manager for IIS
+- IIS Rewrite Module
+- PHP Runtime
+- If needed, VC_Redist.x86 Package
+- MySQL & HeidiSQL
 
-<h2>Installation Steps</h2>
+<h2>Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/a/win-ZALa5KU" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
