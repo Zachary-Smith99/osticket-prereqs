@@ -103,7 +103,7 @@ Navigate through: inetpub > wwwroot > osTicket > include > ost-sampleconfig.php.
 <br />
 
 <p>
-<img src="https://i.imgur.com/w4gDa6U.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/xgFuHBH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Download and run the HeidiSQL installer (https://www.heidisql.com/download.php). Link the appropriate credentials and create a database labeled exactly "osTicket".
