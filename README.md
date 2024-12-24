@@ -22,6 +22,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - IIS with CGI
 - PHP Manager for IIS
+- osTicket
 - IIS Rewrite Module
 - PHP Runtime
 - If needed, VC_Redist.x86 Package
@@ -30,18 +31,82 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Configuration Steps</h2>
 
 <p>
-<img src="https://imgur.com/a/win-ZALa5KU" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/TS1zRT1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Search: "Windows features" > Select "Turn Windows features on or off" > Toggle "Internet Information Services", then expand it > In "World Wide Web Services", expand "Application Development Features" and enable "CGI" > Save & close.  
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/4N8sBA5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Download and install BOTH PHP Manager for ISS and Rewrite Module. PHP Manager: https://www.iis.net/downloads/community/2018/05/php-manager-150-for-iis-10 | Rewrite Module: https://www.iis.net/downloads/microsoft/url-rewrite
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/2f7qlw5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+On the same drive as all your other prerequisites, create a folder labeled "PHP".
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/V7LcgzP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Download the PHP Non-Thread Safe (NTS) runtime x86 (https://windows.php.net/download/), and then EXTRACT it into the "PHP" folder from the last step. Also, if necessary, install the x86 VC_Redist pack (https://www.microsoft.com/en-au/download/details.aspx?id=53587)
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/NO6M8o8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Download MySQL (https://dev.mysql.com/downloads/mysql/) and run the "typical installer". When prompted, create credentials. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/evR1F7o.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Launch IIS in Administrator mode and navigate to "PHP Manager". Where prompted select "Register and new PHP". Navigate to the "PHP" folder from before, select the "php-cgi" executable as the new PHP, and then restart the server.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/wTWZE75.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Download and unzip osTicket. Inside the unzipped osTicket folder, copy the "upload file". Navigate to "wwwroot" folder (Windows drive > inetpub > wwwroot) and paste the "upload" folder into it. Then, RENAME the "upload" folder exactly to "osTicket". Restart the server once again.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/izkhtFU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Open ISS and navigate to osTicket (Sites > Default website > osTicket), select "enable or disable an extension", and enable all three of the following extensions: php_imap.dll, php_intl.dll, php_opcache.dll.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/qE65YY8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Navigate through: inetpub > wwwroot > osTicket > include > ost-sampleconfig.php. Change "ost-sampleconfig.php" to exactly "ost-config.php". Open the properties of this file and assign user permissions.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/w4gDa6U.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Download and run the HeidiSQL installer (https://www.heidisql.com/download.php). Link the appropriate credentials and create a database labeled exactly "osTicket".
 </p>
 <br />
 
